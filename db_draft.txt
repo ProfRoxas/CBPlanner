@@ -1,0 +1,20 @@
+User
+	name
+	pass
+	uid (ingame, unique)
+
+Units
+	name
+	user (many-to-many)
+
+Comps
+	unitN (many-to-many)
+	restrN
+	boss [1-2-3-4-5]
+	round [1-2-3-4-5]
+	damage
+
+Plan
+	user
+	comp
+	estimate
