@@ -1,0 +1,6 @@
+/myself (user)
+    logged in user details
+/users (admin)
+    all user
+/user/id (admin)
+    specific user

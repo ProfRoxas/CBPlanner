@@ -1,11 +1,13 @@
-User
-	name
-	pass
+IGUser
+	username
+	password
 	uid (ingame, unique)
+	role
 
 Units
 	name
-	user (many-to-many)
+	IGUser (many-to-many)
+	image
 
 Comps
 	unitN (many-to-many)

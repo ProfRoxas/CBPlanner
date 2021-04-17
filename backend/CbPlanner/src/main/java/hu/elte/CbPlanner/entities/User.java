@@ -15,6 +15,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -25,17 +26,24 @@ import lombok.NoArgsConstructor;
 public class User implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Integer id;
+  private Long id;
 
   //Values
+  //TODO: Getters/Data refuse to work
   @Column(length=50, nullable=false, unique=true)
-  private String Name;
+  private String username;
+  public String getUsername() {return new String(username);};
   
   @Column(length=50, nullable=false, unique=false)
-  private String Password;
+  private String password;
+  public String getPassword() {return new String(password);};
   
   @Column(length=9, nullable=false, unique=true)
-  private String UID;
+  private String uid;
+
+  @Column(length=9, nullable=false, unique=true)
+  private String role;
+  public String getRole() {return new String(role);};
 
   // TimeStamp
   @Column(updatable = false)
