@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import hu.elte.CbPlanner.entities.Comp;
 import hu.elte.CbPlanner.entities.User;
 import hu.elte.CbPlanner.security.UserRepository;
 

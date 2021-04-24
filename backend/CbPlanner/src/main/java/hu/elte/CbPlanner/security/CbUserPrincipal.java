@@ -19,7 +19,7 @@ public class CbUserPrincipal implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // Simple roles: ADMIN >  > USER > ANON
+        // Simple roles: ADMIN > COMP > USER > ANON
         var auths = Arrays.asList(new SimpleGrantedAuthority("USER"));
         user.getRole();
         switch (user.getRole()) {
